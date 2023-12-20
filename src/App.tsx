@@ -1,8 +1,7 @@
-import React from "react";
 import "./App.css";
 // Assets Import
 import Avatar from "./assets/Photo.png";
-import AvatarBg from "../public/small.png";
+import AvatarBg from "/small.png";
 
 import Header from "./components/Header";
 import Banner from "./components/Banner";
