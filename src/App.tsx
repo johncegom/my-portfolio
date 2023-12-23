@@ -1,7 +1,6 @@
 import "./App.css";
 // Assets Import
-import Avatar from "./assets/Photo.png";
-import AvatarBg from "/small.png";
+import Avatar from "./assets/Photo.jpg";
 
 import Header from "./components/Header";
 import Banner from "./components/Banner";
@@ -11,7 +10,7 @@ function App() {
   return (
     <>
       <Header />
-      <Banner avatar={Avatar} avatarbg={AvatarBg} />
+      <Banner avatar={Avatar} />
       <Projects />
     </>
   );

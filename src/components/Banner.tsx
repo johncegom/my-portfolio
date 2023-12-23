@@ -1,9 +1,8 @@
 interface BannerTypes {
   avatar: string;
-  avatarbg: string;
 }
 
-const Banner = ({ avatar, avatarbg }: BannerTypes) => {
+const Banner = ({ avatar }: BannerTypes) => {
   return (
     <main>
       <section>
@@ -11,26 +10,23 @@ const Banner = ({ avatar, avatarbg }: BannerTypes) => {
           <div>
             <h1 className="font-bold text-3xl">Hello I'm Minh Duong</h1>
             <h1 className="font-bold text-3xl mt-1 gradient-text">
-              Software Engineering
+              Software Engineer
             </h1>
             <p className="mt-4 text-gray-400">
-              I'm a seasoned software engineer with 3 years of expertise in
-              Telecom projects. I've thrived in cross-functional teams,
-              collaborating seamlessly to deliver high-quality software
-              solutions. Now, I'm eager to transition to frontend development,
-              driven by my passion for crafting visually compelling user
-              experiences. Let's collaborate and build something extraordinary
-              together!
+              A seasoned Software Engineer with 3 years of expertise in Telecom
+              projects. I've thrived in cross-functional teams, collaborating
+              seamlessly to deliver high-quality software solutions. Now, I'm
+              eager to transition to Frontend development, driven by my passion
+              for crafting visually compelling user experiences. Let's
+              collaborate and build something extraordinary together!
             </p>
           </div>
-          <div className="relative">
+          <div className="relative w-72 flex items-center">
             <img
               src={avatar}
               alt="Profile's avatar"
-              width={520}
-              className="relative z-10"
+              className="relative z-10 border-2 border-orange-300 rounded-tl-full rounded-br-full rounded-bl-md rounded-tr-md w-full overflow-hidden object-cover"
             />
-            <img src={avatarbg} className="absolute top-0 left-12 z-0" />
           </div>
         </div>
       </section>
