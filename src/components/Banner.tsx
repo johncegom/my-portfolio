@@ -14,10 +14,13 @@ const Banner = ({ avatar, avatarbg }: BannerTypes) => {
               Software Engineering
             </h1>
             <p className="mt-4 text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-              delectus beatae cumque excepturi distinctio architecto, culpa
-              sapiente, quibusdam sequi unde, esse quo et. Minus quaerat
-              inventore sint doloremque nihil ex.
+              I'm a seasoned software engineer with 3 years of expertise in
+              Telecom projects. I've thrived in cross-functional teams,
+              collaborating seamlessly to deliver high-quality software
+              solutions. Now, I'm eager to transition to frontend development,
+              driven by my passion for crafting visually compelling user
+              experiences. Let's collaborate and build something extraordinary
+              together!
             </p>
           </div>
           <div className="relative">
