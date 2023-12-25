@@ -1,45 +1,35 @@
-interface ProjectTypes {
-  image: string;
-  title: string;
-  text: string;
-  technologies: string;
-  link: string;
-  repo: string;
+import { project } from "../types";
+
+interface ProjectType {
+  project: project;
 }
 
-const Project = ({
-  image,
-  title,
-  text,
-  technologies,
-  link,
-  repo,
-}: ProjectTypes) => {
+const Project = ({ project }: ProjectType) => {
   return (
-    <div className="flex-1 border border-gray-500 rounded-md p-5">
+    <div className="flex-[1_1_25%] border border-gray-500 rounded-md p-5 flex flex-col justify-between">
       <img
-        className="w-full h-auto max-h-40"
-        src={image}
+        className="w-full h-auto block ml-auto mr-auto"
+        src={project.image}
         alt="Project Images"
       />
-      <h3 className="text-2xl font-semibold mt-6">{title}</h3>
-      <p className="text-gray-400 text-sm mt-2">{text}</p>
+      <h3 className="text-2xl font-semibold mt-6">{project.title}</h3>
+      <p className="text-gray-400 text-sm mt-2">{project.text}</p>
       <p className="text-gray-300">
         <span className="font-bold">Technologies: </span>
-        <span className="font-semibold">{technologies}</span>
+        <span className="font-semibold">{project.technologies}</span>
       </p>
       <div className="flex justify-evenly mt-6 gap-3">
         <a
-          href={link}
+          href={project.link}
           target="_blank"
-          className="px-6 py-3 text-center rounded-full bg-gradient-to-t from-blue-500 to-cyan-500 hover:from-blue-700 hover:to-cyan-700 cursor-pointer"
+          className="flex-1 py-3 text-center rounded-full bg-gradient-to-t from-red-500 to-orange-500 hover:from-red-700 hover:to-orange-700 cursor-pointer"
         >
           Live Preview
         </a>
         <a
-          href={repo}
+          href={project.repo}
           target="_blank"
-          className="px-6 py-3 text-center border rounded-full hover:border-blue-500 hover:text-blue-500 cursor-pointer"
+          className="flex-1 py-3 text-center border rounded-full hover:border-orange-500 hover:text-orange-500 cursor-pointer"
         >
           Checkout Github
         </a>

@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 const Header = () => {
   return (
     <header className="bg-gradient-to-t from-red-500 to-orange-500">
@@ -9,19 +11,26 @@ const Header = () => {
           <div>
             <ul className="flex gap-4">
               <li>
-                <a className="text-gray-300 hover:text-white cursor-pointer">
+                <Link
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className="text-gray-300 hover:text-white cursor-pointer"
+                >
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="text-gray-300 hover:text-white cursor-pointer">
-                  Technologies
-                </a>
-              </li>
-              <li>
-                <a className="text-gray-300 font-semibold hover:text-white cursor-pointer">
+                <Link
+                  to="aboutme"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className="text-gray-300 font-semibold hover:text-white cursor-pointer"
+                >
                   About Me
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
