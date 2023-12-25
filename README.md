@@ -15,6 +15,6 @@ Feel free to reach out for collaborations, inquiries, or just to say hello. You 
 
 - Email: johncegom2013@gmail.com
 - LinkedIn: https://www.linkedin.com/in/minh-duong-saiko/
-- Portfolio: https://minh-duong-saiko.vercel.app/
+- Portfolio: https://minhduong.vercel.app/
 
 Thank you for visiting! Let's connect and create something extraordinary together.

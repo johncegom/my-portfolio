@@ -20,7 +20,7 @@ function App() {
     {
       image: Project1,
       title: "My Portfolio",
-      link: "https://minh-duong-saiko.vercel.app/",
+      link: "https://minhduong.vercel.app/",
       repo: "https://github.com/johncegom/my-portfolio",
       technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
       text: "A responsive portfolio website. It is a curated collection of my work and achievements, providing a snapshot of my skills and expertise as a Frontend Developer.",
@@ -28,7 +28,7 @@ function App() {
     {
       image: Project2,
       title: "Dummy Project",
-      link: "https://minh-duong-saiko.vercel.app/",
+      link: "https://minhduong.vercel.app/",
       repo: "",
       technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
       text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
@@ -36,7 +36,7 @@ function App() {
     {
       image: Project3,
       title: "Dummy Project",
-      link: "https://minh-duong-saiko.vercel.app/",
+      link: "https://minhduong.vercel.app/",
       repo: "",
       technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
       text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
@@ -44,7 +44,7 @@ function App() {
     {
       image: Project4,
       title: "Dummy Project",
-      link: "https://minh-duong-saiko.vercel.app/",
+      link: "https://minhduong.vercel.app/",
       repo: "",
       technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
       text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
@@ -52,7 +52,7 @@ function App() {
     {
       image: Project2,
       title: "Dummy Project",
-      link: "https://minh-duong-saiko.vercel.app/",
+      link: "https://minhduong.vercel.app/",
       repo: "",
       technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
       text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
@@ -60,7 +60,7 @@ function App() {
     {
       image: Project3,
       title: "Dummy Project",
-      link: "https://minh-duong-saiko.vercel.app/",
+      link: "https://minhduong.vercel.app/",
       repo: "",
       technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
       text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
