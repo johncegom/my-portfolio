@@ -10,7 +10,7 @@ import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Projects from "./components/Projects";
 
-import { projects } from "./types";
+import { projects, skills } from "./types";
 import Skills from "./components/Skills";
 import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
@@ -66,12 +66,20 @@ function App() {
       text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
     },
   ];
+  const SkillData: skills = [
+    "React",
+    "TypeScript",
+    "Tailwind",
+    "Scrum",
+    "Git",
+    "Action Learning",
+  ];
   return (
     <>
       <Header />
       <Banner avatar={Avatar} />
       <Projects projects={ProjectData} />
-      <Skills />
+      <Skills skills={SkillData} />
       <AboutMe />
       <Footer />
     </>

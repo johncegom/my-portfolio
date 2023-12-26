@@ -22,14 +22,14 @@ const Project = ({ project }: ProjectType) => {
         <a
           href={project.link}
           target="_blank"
-          className="flex-1 py-3 text-center rounded-full bg-gradient-to-t from-red-500 to-orange-500 hover:from-red-700 hover:to-orange-700 cursor-pointer"
+          className="flex flex-1 py-3 px-1 text-center justify-center items-center rounded-full bg-gradient-to-t from-red-500 to-orange-500 hover:from-red-700 hover:to-orange-700 cursor-pointer"
         >
           Live Preview
         </a>
         <a
           href={project.repo}
           target="_blank"
-          className="flex-1 py-3 text-center border rounded-full hover:border-orange-500 hover:text-orange-500 cursor-pointer"
+          className="flex flex-1 py-3 px-1 text-center justify-center items-center border rounded-full hover:border-orange-500 hover:text-orange-500 cursor-pointer"
         >
           Checkout Github
         </a>

@@ -7,4 +7,8 @@ export interface project {
   repo: string;
 }
 
+export type skill = string;
+
+export type skills = skill[];
+
 export type projects = project[];
