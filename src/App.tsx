@@ -2,8 +2,8 @@ import "./App.css";
 // Assets Import
 import Avatar from "./assets/Photo.webp";
 import Project1 from "./assets/project1.webp";
-import Project2 from "./assets/project2.png";
-import Project3 from "./assets/project3.png";
+import Project2 from "./assets/project2.webp";
+import Project3 from "./assets/project3.webp";
 import Project4 from "./assets/project4.webp";
 
 import Header from "./components/Header";
