@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import Resume from "../../public/DuongNguyenHoangMinh_CV.pdf";
+import Resume from "../assets/DuongNguyenHoangMinh_CV.pdf";
 
 const Header = () => {
   return (
@@ -50,7 +50,7 @@ const Header = () => {
                 <a
                   className="p-2 rounded border border-white text-white hover:font-bold shadow-black/30 shadow-lg hover:border-2 hover:shadow-white hover:shadow-sm"
                   href={Resume}
-                  download
+                  download="DuongNguyenHoangMinh_CV"
                 >
                   Resume
                 </a>
