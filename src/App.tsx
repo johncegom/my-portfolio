@@ -7,11 +7,11 @@ import ImageHolder from "./assets/placeholder.webp";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Projects from "./components/Projects";
-
 import { projects, skills } from "./types";
 import Skills from "./components/Skills";
 import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const ProjectData: projects = [
@@ -80,6 +80,7 @@ function App() {
       <Skills skills={SkillData} />
       <AboutMe />
       <Footer />
+      <Analytics />
     </>
   );
 }
