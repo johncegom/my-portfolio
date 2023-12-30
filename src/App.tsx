@@ -2,9 +2,7 @@ import "./App.css";
 // Assets Import
 import Avatar from "./assets/Photo.webp";
 import Project1 from "./assets/project1.webp";
-import Project2 from "./assets/project2.webp";
-import Project3 from "./assets/project3.webp";
-import Project4 from "./assets/project4.webp";
+import ImageHolder from "./assets/placeholder.webp";
 
 import Header from "./components/Header";
 import Banner from "./components/Banner";
@@ -20,47 +18,47 @@ function App() {
     {
       image: Project1,
       title: "My Portfolio",
-      link: "https://minhduong.vercel.app/",
+      link: "",
       repo: "https://github.com/johncegom/my-portfolio",
       technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
       text: "A responsive portfolio website. It is a curated collection of my work and achievements, providing a snapshot of my skills and expertise as a Frontend Developer.",
     },
     {
-      image: Project2,
+      image: ImageHolder,
+      title: "Streak",
+      link: "",
+      repo: "",
+      technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
+      text: "Incoming project",
+    },
+    {
+      image: ImageHolder,
       title: "Dummy Project",
-      link: "https://minhduong.vercel.app/",
+      link: "",
       repo: "",
       technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
       text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
     },
     {
-      image: Project3,
+      image: ImageHolder,
       title: "Dummy Project",
-      link: "https://minhduong.vercel.app/",
+      link: "",
       repo: "",
       technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
       text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
     },
     {
-      image: Project4,
+      image: ImageHolder,
       title: "Dummy Project",
-      link: "https://minhduong.vercel.app/",
+      link: "",
       repo: "",
       technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
       text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
     },
     {
-      image: Project2,
+      image: ImageHolder,
       title: "Dummy Project",
-      link: "https://minhduong.vercel.app/",
-      repo: "",
-      technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
-      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
-    },
-    {
-      image: Project3,
-      title: "Dummy Project",
-      link: "https://minhduong.vercel.app/",
+      link: "",
       repo: "",
       technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
       text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
