@@ -50,7 +50,7 @@ const Header = () => {
                 <a
                   className="p-2 rounded border border-white text-white hover:font-bold shadow-black/30 shadow-lg hover:border-2 hover:shadow-white hover:shadow-sm"
                   href={Resume}
-                  download="DuongNguyenHoangMinh_CV"
+                  download="DuongNguyenHoangMinh_CV.pdf"
                 >
                   Resume
                 </a>
