@@ -6,7 +6,7 @@ interface ProjectType {
 
 const Project = ({ project }: ProjectType) => {
   return (
-    <div className="flex-[1_1_25%] border border-gray-500 rounded-md p-5 flex flex-col justify-between">
+    <div className="flex-[1_1_25%] border border-gray-500 rounded-md p-5 flex flex-col justify-between shadow-black/50 shadow-lg">
       <img
         className="w-full h-auto block ml-auto mr-auto"
         src={project.image}
@@ -14,8 +14,7 @@ const Project = ({ project }: ProjectType) => {
       />
       <h3 className="text-2xl font-semibold mt-6">{project.title}</h3>
       <p className="text-gray-400 text-sm mt-2">{project.text}</p>
-      <p className="text-gray-300">
-        <span className="font-bold">Technologies: </span>
+      <p className="text-gray-300 mt-10 technologies text-sm">
         <span className="font-semibold">{project.technologies}</span>
       </p>
       <div className="flex justify-evenly mt-6 gap-3">

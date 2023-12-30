@@ -1,12 +1,15 @@
 import { Link } from "react-scroll";
+import Resume from "../../public/DuongNguyenHoangMinh_CV.pdf";
 
 const Header = () => {
   return (
-    <header className="bg-gradient-to-t from-red-500 to-orange-500">
+    <header className="shadow-black/20 shadow-md">
       <div className="container m-auto px-4 py-6">
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="font-bold text-xl cursor-pointer">My Portfolio</h1>
+            <h1 className="font-semibold ml-4 text-xl cursor-pointer text-dancing-script text-gray-200">
+              MD
+            </h1>
           </div>
           <div>
             <ul className="flex gap-4">
@@ -27,10 +30,30 @@ const Header = () => {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  className="text-gray-300 font-semibold hover:text-white cursor-pointer"
+                  className="text-gray-300 hover:text-white cursor-pointer"
                 >
                   About Me
                 </Link>
+              </li>
+              <li>
+                <Link
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className="text-gray-300 hover:text-white cursor-pointer hidden"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <a
+                  className="p-2 rounded border border-white text-white hover:font-bold shadow-black/30 shadow-lg hover:border-2 hover:shadow-white hover:shadow-sm"
+                  href={Resume}
+                  download
+                >
+                  Resume
+                </a>
               </li>
             </ul>
           </div>

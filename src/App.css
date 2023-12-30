@@ -1,6 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat+Alternates:ital,wght@0,400;1,500&display=swap");
+
 body {
   background-color: #211e1e;
   color: #fff;
+}
+.text-dancing-script {
+  font-family: "Dancing Script", cursive, sans-serif;
+}
+.technologies {
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .gradient-text {

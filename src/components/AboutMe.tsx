@@ -29,8 +29,7 @@ const AboutMe = () => {
             <p>
               Experienced Telecommunication Application Developer, achieved
               proficiency in Erlang. Notably, contribute to project success by
-              efficiently training newcomers in SIP protocol for faster
-              onboarding.
+              efficiently training newcomers in SIP for faster onboarding.
             </p>
             <p>
               Have acted as Scrum Master around 6 months, invested time and

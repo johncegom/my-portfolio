@@ -12,15 +12,16 @@ import Skills from "./components/Skills";
 import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import Contact from "./components/Contact";
 
 function App() {
   const ProjectData: projects = [
     {
       image: Project1,
-      title: "My Portfolio",
+      title: "Personal Portfolio Website",
       link: "",
       repo: "https://github.com/johncegom/my-portfolio",
-      technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
+      technologies: "HTML5 Tailwind CSS ReactJS TypeScript",
       text: "A responsive portfolio website. It is a curated collection of my work and achievements, providing a snapshot of my skills and expertise as a Frontend Developer.",
     },
     {
@@ -28,40 +29,8 @@ function App() {
       title: "Streak",
       link: "",
       repo: "",
-      technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
-      text: "Incoming project",
-    },
-    {
-      image: ImageHolder,
-      title: "Dummy Project",
-      link: "",
-      repo: "",
-      technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
-      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
-    },
-    {
-      image: ImageHolder,
-      title: "Dummy Project",
-      link: "",
-      repo: "",
-      technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
-      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
-    },
-    {
-      image: ImageHolder,
-      title: "Dummy Project",
-      link: "",
-      repo: "",
-      technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
-      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
-    },
-    {
-      image: ImageHolder,
-      title: "Dummy Project",
-      link: "",
-      repo: "",
-      technologies: "HTML5, Tailwind CSS, ReactJS, TypeScript",
-      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem tempore odio molestiae repudiandae numquam vero nemo nostrum.",
+      technologies: "HTML5 Tailwind CSS ReactJS TypeScript",
+      text: "Incoming project.",
     },
   ];
   const SkillData: skills = [
@@ -79,6 +48,7 @@ function App() {
       <Projects projects={ProjectData} />
       <Skills skills={SkillData} />
       <AboutMe />
+      <Contact />
       <Footer />
       <Analytics />
     </>
