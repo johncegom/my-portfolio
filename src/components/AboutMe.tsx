@@ -29,13 +29,13 @@ const AboutMe = () => {
             <p>
               Experienced Telecommunication Application Developer, achieved
               proficiency in Erlang. Notably, contribute to project success by
-              efficiently training newcomers in SIP for faster onboarding.
+              efficiently training newcomers in Session Initiation Protocol
+              (SIP) for faster onboarding.
             </p>
             <p>
-              Have acted as Scrum Master around 6 months, invested time and
-              effort into researching and implementing the Scrum framework,
-              achieving notable improvements in optimizing the team's way of
-              working.
+              Have acted as Scrum Master around 1 year, invested time and effort
+              into researching and implementing the Scrum framework, achieving
+              notable improvements in optimizing the team's way of working.
             </p>
           </div>
           <div className="ml-10 mb-7 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-red-500 before:to-orange-500 before:absolute before:rounded-full before:-left-[30px] before:top-1">
