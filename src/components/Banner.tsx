@@ -7,7 +7,7 @@ const Banner = ({ avatar }: BannerTypes) => {
     <main>
       <div className="container m-auto px-4 py-10 flex flex-col lg:flex-row gap-6 cursor-default">
         <div>
-          <h1 className="font-bold text-3xl">Hello, I'm Minh Duong 👋</h1>
+          <h1 className="font-bold text-3xl">Hi, I'm Minh Duong 👋</h1>
           <h1 className="font-bold text-3xl mt-1 gradient-text">
             Software Engineer
           </h1>
