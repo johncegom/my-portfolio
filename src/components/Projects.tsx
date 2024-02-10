@@ -11,9 +11,9 @@ const Projects = ({ projects }: ProjectsType) => {
       <div className="container m-auto px-4">
         <h2 className="text-2xl font-semibold">Projects</h2>
         <div className="flex gap-10 mt-10 flex-wrap">
-          {projects.map<JSX.Element>((project, index) => {
-            return <Project key={index} project={project} />;
-          })}
+          {projects.map<JSX.Element>((project, index) => (
+            <Project key={index} project={project} />
+          ))}
         </div>
       </div>
     </section>
