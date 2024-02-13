@@ -19,6 +19,7 @@ function App() {
   const [projects, setProjects] = useState<projects>([]);
   const [skills, setSkills] = useState<skills>([]);
 
+  // Fetching all projects data.
   useEffect(() => {
     const projectsCollectionRef = collection(db, "projects");
     const queryProjectsRef = query(projectsCollectionRef, orderBy("title"));
@@ -42,6 +43,7 @@ function App() {
     PROJECT_DATA;
   }, []);
 
+  // Fetching all skills data.
   useEffect(() => {
     const skillsCollectionRef = collection(db, "skills");
     const SKILL_DATA = onSnapshot(skillsCollectionRef, (snapshot) => {

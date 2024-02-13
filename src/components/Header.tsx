@@ -41,7 +41,7 @@ const Header = () => {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  className="text-gray-300 hover:text-white cursor-pointer hidden"
+                  className="text-gray-300 hover:text-white cursor-pointer"
                 >
                   Contact
                 </Link>

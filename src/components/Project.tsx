@@ -28,7 +28,7 @@ const Project = ({ project }: ProjectType) => {
         <a
           href={project.repo}
           target="_blank"
-          className="flex flex-1 py-3 px-1 text-center justify-center items-center border rounded-full hover:border-orange-500 hover:text-orange-500 cursor-pointer"
+          className="flex flex-1 py-3 px-1 text-center justify-center items-center border rounded-full hover:border-gray-500 hover:text-orange-500 cursor-pointer"
         >
           Checkout Github
         </a>
