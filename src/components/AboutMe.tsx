@@ -17,7 +17,7 @@ const AboutMe = () => {
               Can Tho University
             </h4>
             <p>
-              Graduated with a Bachelor's degree in Information Technology (High
+              Graduated with a Engineer's degree in Information Technology (High
               Quality Program).
             </p>
           </div>
