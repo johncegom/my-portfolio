@@ -1,3 +1,4 @@
+import VnFlag from "../assets/vn-flag.svg";
 interface BannerTypes {
   avatar: string;
 }
@@ -7,10 +8,15 @@ const Banner = ({ avatar }: BannerTypes) => {
     <main>
       <div className="container m-auto px-4 py-10 flex flex-col lg:flex-row gap-6 cursor-default">
         <div>
-          <h1 className="font-bold text-3xl">Hi, I'm Minh Duong 👋</h1>
-          <h1 className="font-bold text-3xl mt-1 gradient-text">
-            Software Engineer
-          </h1>
+          <div className="flex justify-center flex-col">
+            <h1 className="font-bold text-3xl flex flex-row gap-2">
+              Hi, I'm Minh Duong
+              <img src={VnFlag} className="w-10" />
+            </h1>
+            <h1 className="font-bold text-3xl mt-1 gradient-text">
+              Software Engineer
+            </h1>
+          </div>
           <p className="mt-4 text-gray-400 text-justify">
             Seasoned Software Engineer with 3 years of expertise in Telecom
             projects. I've thrived in cross-functional teams, collaborating
