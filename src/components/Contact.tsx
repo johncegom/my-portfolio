@@ -3,9 +3,9 @@ import Gmail from "../assets/gmail.svg";
 const Contact = () => {
   return (
     <section id="contact" className="py-8">
-      <div className="container m-auto px-4">
+      <div className="container m-auto px-4 text-center">
         <h2 className="text-2xl font-semibold">Get In Touch</h2>
-        <p className="mt-3 mr-auto ml-auto w-max">
+        <p className="mt-3 mr-auto ml-auto md:w-3/5">
           Currently exploring new opportunities. If you have a role that fits or
           want to connect, I'm available. Excited about the potential for
           collaborations and discovering how my skills can contribute to your
