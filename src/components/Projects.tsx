@@ -3,16 +3,19 @@ import { projects } from "../types";
 
 interface ProjectsType {
   projects: projects;
+  language?: string;
 }
 
-const Projects = ({ projects }: ProjectsType) => {
+const Projects = ({ projects, language = "English" }: ProjectsType) => {
   return (
     <section id="projects">
       <div className="container m-auto px-4">
-        <h2 className="text-2xl font-semibold">Projects</h2>
+        <h2 className="text-2xl font-semibold">
+          {language === "English" ? "Projects" : "Dự Án"}
+        </h2>
         <div className="flex gap-10 mt-10 flex-wrap">
           {projects.map<JSX.Element>((project, index) => (
-            <Project key={index} project={project} />
+            <Project key={index} project={project} language={language} />
           ))}
         </div>
       </div>

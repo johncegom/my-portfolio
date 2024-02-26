@@ -18,6 +18,7 @@ import { db } from "./data/Firebase";
 function App() {
   const [projects, setProjects] = useState<projects>([]);
   const [skills, setSkills] = useState<skills>([]);
+  const [language, setLanguage] = useState<string>("English");
 
   // Fetching all projects data.
   useEffect(() => {
@@ -34,6 +35,7 @@ function App() {
             repo: DATA.repo,
             technologies: DATA.technologies,
             text: DATA.text,
+            textVie: DATA.textVie,
             link: DATA.link,
           };
         })
@@ -58,15 +60,19 @@ function App() {
     SKILL_DATA;
   }, []);
 
+  const switchLanguge = () => {
+    language === "English" ? setLanguage("Vietnamese") : setLanguage("English");
+  };
+
   return (
     <>
-      <Header />
-      <Banner avatar={Avatar} />
-      <Projects projects={projects} />
-      <Skills skills={skills} />
-      <AboutMe />
-      <Contact />
-      <Footer />
+      <Header switchLanguage={switchLanguge} language={language} />
+      <Banner avatar={Avatar} language={language} />
+      <Projects projects={projects} language={language} />
+      <Skills skills={skills} language={language} />
+      <AboutMe language={language} />
+      <Contact language={language} />
+      <Footer language={language} />
       <Analytics />
     </>
   );
