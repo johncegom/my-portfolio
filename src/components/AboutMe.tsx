@@ -28,7 +28,7 @@ const AboutMe = ({ language = "English" }: AboutMeType) => {
             </h4>
             <p>
               {language === "English"
-                ? "Graduated with a Engineer's degree in Information Technology (HighQuality Program)."
+                ? "Graduated with a Engineer's degree in Information Technology (High Quality Program)."
                 : "Tốt nghiệp bằng kỹ sư chuyên ngành Công Nghệ Thông Tin (Chương Trình Chất Lượng Cao)."}
             </p>
           </div>
