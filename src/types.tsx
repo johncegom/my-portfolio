@@ -7,6 +7,7 @@ export interface project {
   link: string;
   repo: string;
   textVie: string;
+  type: string;
 }
 
 export type skill = string;

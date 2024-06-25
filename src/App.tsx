@@ -37,6 +37,7 @@ function App() {
             text: DATA.text,
             textVie: DATA.textVie,
             link: DATA.link,
+            type: DATA.type,
           };
         })
       );

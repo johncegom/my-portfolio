@@ -7,7 +7,7 @@ interface ProjectType {
 
 const Project = ({ project, language = "English" }: ProjectType) => {
   return (
-    <div className="md:flex-[1_1_30%] border border-gray-500 rounded-md p-5 flex flex-col justify-between shadow-black/50 shadow-lg">
+    <div className="md:flex-[1_1_30%] border border-gray-500 rounded-md p-5 flex flex-col justify-between shadow-black/50 shadow-lg relative">
       <a href={project.link} target="_blank">
         <img
           className="w-full h-auto block ml-auto mr-auto"
@@ -39,6 +39,9 @@ const Project = ({ project, language = "English" }: ProjectType) => {
         >
           {language === "English" ? "Checkout Github" : "Xem Mã Nguồn"}
         </a>
+      </div>
+      <div className="absolute right-0 top-0 bg-[#EA403F] text-[#FFFE4E] py-2 px-4 rounded-tr-sm hover:cursor-default">
+        {project.type || "Solo Project"}
       </div>
     </div>
   );
