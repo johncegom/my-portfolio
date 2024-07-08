@@ -13,7 +13,7 @@ const Projects = ({ projects, language = "English" }: ProjectsType) => {
         <h2 className="text-2xl font-semibold">
           {language === "English" ? "Projects" : "Dự Án"}
         </h2>
-        <div className="flex gap-10 mt-10 flex-wrap">
+        <div className="flex gap-6 mt-10 flex-wrap">
           {projects.map<JSX.Element>((project, index) => (
             <Project key={index} project={project} language={language} />
           ))}

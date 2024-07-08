@@ -7,7 +7,7 @@ interface ProjectType {
 
 const Project = ({ project, language = "English" }: ProjectType) => {
   return (
-    <div className="md:flex-[1_1_30%] border border-gray-500 rounded-md p-5 flex flex-col justify-between shadow-black/50 shadow-lg relative">
+    <div className="md:flex-[1_380px] border border-gray-500 rounded-md p-5 flex flex-col justify-between shadow-black/50 shadow-lg relative">
       <a href={project.link} target="_blank">
         <img
           className="w-full h-auto block ml-auto mr-auto"
