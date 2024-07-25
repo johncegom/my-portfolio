@@ -10,7 +10,7 @@ const Project = ({ project, language = "English" }: ProjectType) => {
     <div className="md:flex-[1_380px] border border-gray-500 rounded-md p-5 flex flex-col justify-between shadow-black/50 shadow-lg relative">
       <a href={project.link} target="_blank">
         <img
-          className="w-full h-auto block ml-auto mr-auto"
+          className="w-full h-auto lg:aspect-video lg:object-contain"
           src={project.image}
           alt="Project Images"
         />
