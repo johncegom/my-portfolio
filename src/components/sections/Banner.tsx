@@ -1,4 +1,4 @@
-import VnFlag from "../assets/vn-flag.svg";
+import VnFlag from "../../assets/vn-flag.svg";
 interface BannerTypes {
   avatar: string;
   language?: string;

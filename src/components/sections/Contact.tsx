@@ -1,4 +1,4 @@
-import Gmail from "../assets/gmail.svg";
+import Gmail from "../../assets/gmail.svg";
 
 interface ContactType {
   language: string;

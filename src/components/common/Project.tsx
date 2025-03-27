@@ -1,4 +1,4 @@
-import { project } from "../types";
+import { project } from "../../types/types";
 
 interface ProjectType {
   project: project;

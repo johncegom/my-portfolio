@@ -1,5 +1,5 @@
-import Project from "./Project";
-import { projects } from "../types";
+import Project from "../common/Project";
+import { projects } from "../../types/types";
 
 interface ProjectsType {
   projects: projects;

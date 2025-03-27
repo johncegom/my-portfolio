@@ -1,4 +1,4 @@
-import { skill } from "../types";
+import { skill } from "../../types/types";
 
 interface SkillType {
   skill: skill;

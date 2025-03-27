@@ -2,18 +2,18 @@ import "./App.css";
 // Assets Import
 import Avatar from "./assets/Photo.webp";
 
-import Header from "./components/Header";
-import Banner from "./components/Banner";
-import Projects from "./components/Projects";
-import { projects, skills } from "./types";
-import Skills from "./components/Skills";
-import AboutMe from "./components/AboutMe";
-import Footer from "./components/Footer";
+import Header from "./components/layout/Header";
+import Banner from "./components/sections/Banner";
+import Projects from "./components/sections/Projects";
+import { projects, skills } from "./types/types";
+import Skills from "./components/sections/Skills";
+import AboutMe from "./components/sections/AboutMe";
+import Footer from "./components/layout/Footer";
 import { Analytics } from "@vercel/analytics/react";
-import Contact from "./components/Contact";
+import Contact from "./components/sections/Contact";
 import { useEffect, useState } from "react";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
-import { db } from "./data/Firebase";
+import { db } from "./services/firebase/Firebase";
 
 function App() {
   const [projects, setProjects] = useState<projects>([]);
@@ -61,13 +61,13 @@ function App() {
     SKILL_DATA;
   }, []);
 
-  const switchLanguge = () => {
+  const switchLanguage = () => {
     language === "English" ? setLanguage("Vietnamese") : setLanguage("English");
   };
 
   return (
     <>
-      <Header switchLanguage={switchLanguge} language={language} />
+      <Header switchLanguage={switchLanguage} language={language} />
       <Banner avatar={Avatar} language={language} />
       <Projects projects={projects} language={language} />
       <Skills skills={skills} language={language} />

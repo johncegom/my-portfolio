@@ -1,5 +1,5 @@
-import { skills } from "../types";
-import Skill from "./Skill";
+import { skills } from "../../types/types";
+import Skill from "../common/Skill";
 
 interface SkillsType {
   skills: skills;

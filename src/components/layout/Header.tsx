@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import Resume from "../assets/DuongNguyenHoangMinh_CV.pdf";
+import Resume from "../../assets/DuongNguyenHoangMinh_CV.pdf";
 
 interface HeaderType {
   switchLanguage: () => void;
