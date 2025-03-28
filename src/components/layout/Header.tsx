@@ -1,12 +1,12 @@
 import { Link } from "react-scroll";
 import Resume from "../../assets/DuongNguyenHoangMinh_CV.pdf";
 
-interface HeaderType {
+interface HeaderProps {
   switchLanguage: () => void;
   language?: string;
 }
 
-const Header = ({ switchLanguage, language = "English" }: HeaderType) => {
+const Header = ({ switchLanguage, language = "English" }: HeaderProps) => {
   return (
     <header className="shadow-black/20 shadow-md">
       <div className="container m-auto px-4 py-6">

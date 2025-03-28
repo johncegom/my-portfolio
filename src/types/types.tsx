@@ -1,4 +1,5 @@
-export interface project {
+// Use PascalCase for interface and type names
+export interface ProjectType {
   id: string;
   image: string;
   title: string;
@@ -10,8 +11,9 @@ export interface project {
   type: string;
 }
 
-export type skill = string;
+export type SkillType = string;
 
-export type skills = skill[];
+// Use arrays directly instead of creating a type alias for an array
+export type SkillsType = SkillType[];
 
-export type projects = project[];
+export type ProjectsType = ProjectType[];

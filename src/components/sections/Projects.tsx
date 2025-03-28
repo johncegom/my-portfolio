@@ -1,12 +1,12 @@
 import Project from "../common/Project";
-import { projects } from "../../types/types";
+import { ProjectsType } from "../../types/types";
 
-interface ProjectsType {
-  projects: projects;
+interface ProjectsProps {
+  projects: ProjectsType;
   language?: string;
 }
 
-const Projects = ({ projects, language = "English" }: ProjectsType) => {
+const Projects = ({ projects, language = "English" }: ProjectsProps) => {
   return (
     <section id="projects">
       <div className="container m-auto px-4">

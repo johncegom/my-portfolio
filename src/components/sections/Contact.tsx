@@ -1,10 +1,10 @@
 import Gmail from "../../assets/gmail.svg";
 
-interface ContactType {
+interface ContactProps {
   language: string;
 }
 
-const Contact = ({ language }: ContactType) => {
+const Contact = ({ language }: ContactProps) => {
   return (
     <section id="contact" className="py-8">
       <div className="container m-auto px-4 text-center">

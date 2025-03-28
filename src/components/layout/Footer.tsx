@@ -1,8 +1,8 @@
-interface FooterType {
+interface FooterProps {
   language?: string;
 }
 
-const Footer = ({ language = "English" }: FooterType) => {
+const Footer = ({ language = "English" }: FooterProps) => {
   return (
     <footer>
       <div className="container m-auto flex justify-between px-4 py-6">

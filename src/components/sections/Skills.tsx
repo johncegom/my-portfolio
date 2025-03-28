@@ -1,12 +1,12 @@
-import { skills } from "../../types/types";
+import { SkillsType } from "../../types/types";
 import Skill from "../common/Skill";
 
-interface SkillsType {
-  skills: skills;
+interface SkillsProps {
+  skills: SkillsType;
   language?: string;
 }
 
-const Skills = ({ skills, language = "English" }: SkillsType) => {
+const Skills = ({ skills, language = "English" }: SkillsProps) => {
   return (
     <section>
       <div className="container m-auto px-4 py-14">

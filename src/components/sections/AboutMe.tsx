@@ -1,8 +1,8 @@
-interface AboutMeType {
+interface AboutMeProps {
   language?: string;
 }
 
-const AboutMe = ({ language = "English" }: AboutMeType) => {
+const AboutMe = ({ language = "English" }: AboutMeProps) => {
   return (
     <section id="aboutme" className="py-8">
       <div className="container m-auto px-4">

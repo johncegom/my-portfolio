@@ -1,11 +1,11 @@
-import { project } from "../../types/types";
+import { ProjectType } from "../../types/types";
 
-interface ProjectType {
-  project: project;
+interface ProjectProps {
+  project: ProjectType;
   language?: string;
 }
 
-const Project = ({ project, language = "English" }: ProjectType) => {
+const Project = ({ project, language = "English" }: ProjectProps) => {
   return (
     <div className="md:flex-[1_380px] border border-gray-500 rounded-md p-5 flex flex-col justify-between shadow-black/50 shadow-lg relative">
       <a href={project.link} target="_blank">

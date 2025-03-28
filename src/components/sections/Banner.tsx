@@ -1,10 +1,10 @@
 import VnFlag from "../../assets/vn-flag.svg";
-interface BannerTypes {
+interface BannerProps {
   avatar: string;
   language?: string;
 }
 
-const Banner = ({ avatar, language = "English" }: BannerTypes) => {
+const Banner = ({ avatar, language = "English" }: BannerProps) => {
   if (language === "English")
     return (
       <main>
