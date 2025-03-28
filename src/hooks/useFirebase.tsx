@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { ProjectsType, ProjectType, SkillsType } from "../types/types";
-import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
+import {
+  collection,
+  DocumentData,
+  onSnapshot,
+  orderBy,
+  query,
+} from "firebase/firestore";
 import { db } from "../services/firebase/Firebase";
 
 /**
@@ -22,7 +28,7 @@ import { db } from "../services/firebase/Firebase";
  *     - link: Live demonstration link of the project
  *     - type: Type/category of the project
  */
-export const useProjects = () => {
+export function useProjects() {
   // State to store projects data
   const [projects, setProjects] = useState<ProjectsType>([]);
 
@@ -37,7 +43,7 @@ export const useProjects = () => {
       const unsubscribe = onSnapshot(projectsQuery, (snapshot) => {
         // Transform Firestore documents into ProjectType objects
         const projectsData = snapshot.docs.map((doc) => {
-          const data = doc.data();
+          const data = doc.data() as DocumentData;
           return {
             id: doc.id,
             title: data.title,
@@ -64,7 +70,7 @@ export const useProjects = () => {
 
   // Return projects data
   return { projects };
-};
+}
 
 /**
  * A custom hook that fetches and provides real-time updates for skills data from Firebase.
@@ -80,7 +86,7 @@ export const useProjects = () => {
  * // skills will be an array of skill names like ['JavaScript', 'React', 'Node.js']
  * ```
  */
-export const useSkills = () => {
+export function useSkills() {
   // State to store skills data
   const [skills, setSkills] = useState<SkillsType>([]);
 
@@ -93,16 +99,16 @@ export const useSkills = () => {
       const unsbcribe = onSnapshot(skillsCollectionRef, (snapshot) => {
         // Transform Firestore documents into skill names
         const skillsData = snapshot.docs.map((doc) => {
-          const data = doc.data();
+          const data = doc.data() as DocumentData;
           return data.name;
         });
 
         // Update state with latest skills
         setSkills(skillsData);
-
-        // Cleanup function to unsubscribe when component unmounts
-        return () => unsbcribe();
       });
+
+      // Cleanup function to unsubscribe when component unmounts
+      return () => unsbcribe();
     } catch (err) {
       return () => {};
     }
@@ -110,4 +116,4 @@ export const useSkills = () => {
 
   // Return skills data
   return { skills };
-};
+}
