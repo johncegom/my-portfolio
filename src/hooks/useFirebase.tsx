@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { ProjectsType, ProjectType, SkillsType } from "../types/types";
 import {
   collection,
   DocumentData,
@@ -8,6 +7,8 @@ import {
   query,
 } from "firebase/firestore";
 import { db } from "../services/firebase/Firebase";
+
+import { ProjectsType, ProjectType, SkillsType } from "../types/types";
 
 /**
  * Custom hook to fetch and subscribe to projects from Firebase Firestore.
@@ -43,18 +44,7 @@ export function useProjects() {
       const unsubscribe = onSnapshot(projectsQuery, (snapshot) => {
         // Transform Firestore documents into ProjectType objects
         const projectsData = snapshot.docs.map((doc) => {
-          const data = doc.data() as DocumentData;
-          return {
-            id: doc.id,
-            title: data.title,
-            image: data.image,
-            repo: data.repo,
-            technologies: data.technologies,
-            text: data.text,
-            textVie: data.textVie,
-            link: data.link,
-            type: data.type,
-          } as ProjectType;
+          return mapFirestoreDocToProject(doc);
         });
 
         // Update state with the latest projects
@@ -70,6 +60,31 @@ export function useProjects() {
 
   // Return projects data
   return { projects };
+}
+
+/**
+ * Converts a Firestore document to a ProjectType object.
+ *
+ * @param doc - The Firestore document data to be converted
+ * @returns A ProjectType object with data from the Firestore document
+ *
+ * @remarks
+ * This function maps the Firestore document fields to the corresponding ProjectType properties.
+ * If a field is missing in the Firestore document, an empty string is used as a default value.
+ */
+function mapFirestoreDocToProject(doc: DocumentData): ProjectType {
+  const data = doc.data();
+  return {
+    id: doc.id,
+    title: data.title || "",
+    image: data.image || "",
+    repo: data.repo || "",
+    technologies: data.technologies || "",
+    text: data.text || "",
+    textVie: data.textVie || "",
+    link: data.link || "",
+    type: data.type || "",
+  };
 }
 
 /**
@@ -96,7 +111,7 @@ export function useSkills() {
       const skillsCollectionRef = collection(db, "skills");
 
       // Real-time subscription to skills data
-      const unsbcribe = onSnapshot(skillsCollectionRef, (snapshot) => {
+      const unsubscribe = onSnapshot(skillsCollectionRef, (snapshot) => {
         // Transform Firestore documents into skill names
         const skillsData = snapshot.docs.map((doc) => {
           const data = doc.data() as DocumentData;
@@ -108,7 +123,7 @@ export function useSkills() {
       });
 
       // Cleanup function to unsubscribe when component unmounts
-      return () => unsbcribe();
+      return () => unsubscribe();
     } catch (err) {
       return () => {};
     }
