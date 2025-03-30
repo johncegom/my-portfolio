@@ -15,10 +15,11 @@ export const getTranslation = (
   component: TranslationComponent,
   key: string
 ): string => {
+  // Get translations for the specified component in the selected language
   const componentTranslations = translations[language][component];
-  if (key in componentTranslations) {
-    return componentTranslations[key as keyof typeof componentTranslations];
-  } else {
-    return key;
-  }
+
+  // Return the translated value or fall back to the key if not found
+  return (
+    componentTranslations[key as keyof typeof componentTranslations] ?? key
+  );
 };
