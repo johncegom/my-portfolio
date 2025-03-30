@@ -18,9 +18,10 @@ import Contact from "./components/sections/Contact";
 
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
+import { SupportedLanguage } from "./translations/translation";
 
 function App() {
-  const [language, setLanguage] = useState<string>("English");
+  const [language, setLanguage] = useState<SupportedLanguage>("English");
 
   const { projects } = useProjects();
   const { skills } = useSkills();
