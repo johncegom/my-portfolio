@@ -1,11 +1,15 @@
+import { useTranslation } from "../../hooks/useTranslation";
+import { SupportedLanguage } from "../../translations/translation";
 import { ProjectType } from "../../types/types";
 
 interface ProjectProps {
   project: ProjectType;
-  language?: string;
+  language?: SupportedLanguage;
 }
 
 const Project = ({ project, language = "English" }: ProjectProps) => {
+  const { translate } = useTranslation(language);
+
   return (
     <div className="md:flex-[1_380px] border border-gray-500 rounded-md p-5 flex flex-col justify-between shadow-black/50 shadow-lg relative">
       <a href={project.link} target="_blank">
@@ -30,14 +34,14 @@ const Project = ({ project, language = "English" }: ProjectProps) => {
           target="_blank"
           className="flex flex-1 py-3 px-1 text-center justify-center items-center rounded-full bg-gradient-to-t from-red-500 to-orange-500 hover:from-red-700 hover:to-orange-700 cursor-pointer"
         >
-          {language === "English" ? "Live Preview" : "Xem Bản Mẫu"}
+          {translate("project", "preview")}
         </a>
         <a
           href={project.repo}
           target="_blank"
           className="flex flex-1 py-3 px-1 text-center justify-center items-center border rounded-full hover:border-gray-500 hover:text-orange-500 cursor-pointer"
         >
-          {language === "English" ? "Checkout Github" : "Xem Mã Nguồn"}
+          {translate("project", "github")}
         </a>
       </div>
       <div className="absolute right-0 top-0 bg-[#EA403F] text-[#FFFE4E] py-2 px-4 rounded-tr-sm hover:cursor-default">

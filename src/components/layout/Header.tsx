@@ -1,12 +1,16 @@
 import { Link } from "react-scroll";
 import Resume from "../../assets/DuongNguyenHoangMinh_CV.pdf";
+import { useTranslation } from "../../hooks/useTranslation";
+import { SupportedLanguage } from "../../translations/translation";
 
 interface HeaderProps {
   switchLanguage: () => void;
-  language?: string;
+  language?: SupportedLanguage;
 }
 
 const Header = ({ switchLanguage, language = "English" }: HeaderProps) => {
+  const { translate } = useTranslation(language);
+
   return (
     <header className="shadow-black/20 shadow-md">
       <div className="container m-auto px-4 py-6">
@@ -32,7 +36,7 @@ const Header = ({ switchLanguage, language = "English" }: HeaderProps) => {
                 duration={500}
                 className="text-gray-300 hover:text-white cursor-pointer"
               >
-                {language === "English" ? "Projects" : "Dự Án"}
+                {translate("header", "projects")}
               </Link>
             </li>
             <li className="hidden md:inline">
@@ -43,7 +47,7 @@ const Header = ({ switchLanguage, language = "English" }: HeaderProps) => {
                 duration={500}
                 className="text-gray-300 hover:text-white cursor-pointer"
               >
-                {language === "English" ? "About Me" : "Về Tôi"}
+                {translate("header", "about")}
               </Link>
             </li>
             <li>
@@ -54,7 +58,7 @@ const Header = ({ switchLanguage, language = "English" }: HeaderProps) => {
                 duration={500}
                 className="text-gray-300 hover:text-white cursor-pointer"
               >
-                {language === "English" ? "Contact" : "Liên Lạc"}
+                {translate("header", "contact")}
               </Link>
             </li>
             <li>
