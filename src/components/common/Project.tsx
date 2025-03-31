@@ -22,7 +22,7 @@ const Project = ({ project, language = "English" }: ProjectProps) => {
         <img
           className="w-full h-auto lg:aspect-video lg:object-contain"
           src={project.image}
-          alt={`${project.title} + screenshot`}
+          alt={`${project.title} screenshot`}
           loading="lazy"
           onLoad={() => setImageLoaded(true)}
           onError={() => setImageError(true)}
