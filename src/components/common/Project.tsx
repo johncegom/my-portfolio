@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { useTranslation } from "../../hooks/useTranslation";
 import { SupportedLanguage } from "../../translations/translation";
 import { ProjectType } from "../../types/types";
+import { ProjectImageFallback, ProjectImageSkeleton } from "./ProjectSkeleton";
 
 interface ProjectProps {
   project: ProjectType;
@@ -9,14 +11,21 @@ interface ProjectProps {
 
 const Project = ({ project, language = "English" }: ProjectProps) => {
   const { translate } = useTranslation(language);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   return (
     <div className="md:flex-[1_380px] border border-gray-500 rounded-md p-5 flex flex-col shadow-black/50 shadow-lg relative gap-6">
-      <a href={project.link} target="_blank">
+      <a href={project.link} target="_blank" rel="noopener noreferrer">
+        {!imageLoaded && <ProjectImageSkeleton />}
+        {imageError && <ProjectImageFallback title={project.title} />}
         <img
           className="w-full h-auto lg:aspect-video lg:object-contain"
           src={project.image}
-          alt="Project Images"
+          alt={`${project.title} + screenshot`}
+          loading="lazy"
+          onLoad={() => setImageLoaded(true)}
+          onError={() => setImageError(true)}
         />
       </a>
       <a href={project.link} target="_blank">
