@@ -11,7 +11,7 @@ const Project = ({ project, language = "English" }: ProjectProps) => {
   const { translate } = useTranslation(language);
 
   return (
-    <div className="md:flex-[1_380px] border border-gray-500 rounded-md p-5 flex flex-col justify-between shadow-black/50 shadow-lg relative">
+    <div className="md:flex-[1_380px] border border-gray-500 rounded-md p-5 flex flex-col shadow-black/50 shadow-lg relative gap-6">
       <a href={project.link} target="_blank">
         <img
           className="w-full h-auto lg:aspect-video lg:object-contain"
@@ -20,15 +20,15 @@ const Project = ({ project, language = "English" }: ProjectProps) => {
         />
       </a>
       <a href={project.link} target="_blank">
-        <h3 className="text-2xl font-semibold mt-6">{project.title}</h3>
+        <h3 className="text-2xl font-semibold">{project.title}</h3>
       </a>
-      <p className="text-gray-400 text-sm mt-2">
+      <p className="text-gray-400 text-sm">
         {language === "English" ? project.text : project.textVie}
       </p>
-      <p className="text-gray-300 mt-10 technologies text-sm">
+      <p className="text-gray-300 technologies text-sm mt-auto">
         <span className="font-semibold">{project.technologies}</span>
       </p>
-      <div className="flex justify-evenly mt-6 gap-3">
+      <div className="flex justify-evenly gap-3">
         <a
           href={project.link}
           target="_blank"

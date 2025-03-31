@@ -23,7 +23,7 @@ import { SupportedLanguage } from "./translations/translation";
 function App() {
   const [language, setLanguage] = useState<SupportedLanguage>("English");
 
-  const { projects } = useProjects();
+  const { projects, loading: projectsLoading } = useProjects();
   const { skills } = useSkills();
 
   const switchLanguage = () => {
@@ -34,7 +34,11 @@ function App() {
     <>
       <Header switchLanguage={switchLanguage} language={language} />
       <Banner avatar={Avatar} language={language} />
-      <Projects projects={projects} language={language} />
+      <Projects
+        projects={projects}
+        language={language}
+        loading={projectsLoading}
+      />
       <Skills skills={skills} language={language} />
       <AboutMe language={language} />
       <Contact language={language} />

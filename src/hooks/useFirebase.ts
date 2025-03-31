@@ -32,8 +32,11 @@ import { ProjectsType, ProjectType, SkillsType } from "../types/types";
 export function useProjects() {
   // State to store projects data
   const [projects, setProjects] = useState<ProjectsType>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
+
     try {
       // Reference to projects collection
       const projectsCollectionRef = collection(db, "projects");
@@ -49,6 +52,9 @@ export function useProjects() {
 
         // Update state with the latest projects
         setProjects(projectsData);
+
+        // Data fetched, set loading to false
+        setLoading(false);
       });
 
       // Cleanup function to unsubscribe when component unmounts
@@ -59,7 +65,7 @@ export function useProjects() {
   }, []);
 
   // Return projects data
-  return { projects };
+  return { projects, loading };
 }
 
 /**
@@ -104,8 +110,11 @@ function mapFirestoreDocToProject(doc: DocumentData): ProjectType {
 export function useSkills() {
   // State to store skills data
   const [skills, setSkills] = useState<SkillsType>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
+
     try {
       // Reference to skills collection
       const skillsCollectionRef = collection(db, "skills");
@@ -120,6 +129,9 @@ export function useSkills() {
 
         // Update state with latest skills
         setSkills(skillsData);
+
+        // Data fetched, set loading to false
+        setLoading(false);
       });
 
       // Cleanup function to unsubscribe when component unmounts
@@ -130,5 +142,5 @@ export function useSkills() {
   }, []);
 
   // Return skills data
-  return { skills };
+  return { skills, loading };
 }

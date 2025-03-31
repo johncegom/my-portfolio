@@ -2,13 +2,19 @@ import Project from "../common/Project";
 import { ProjectsType } from "../../types/types";
 import { SupportedLanguage } from "../../translations/translation";
 import { useTranslation } from "../../hooks/useTranslation";
+import { ProjectsLayoutSkeleton } from "../common/ProjectSkeleton";
 
 interface ProjectsProps {
   projects: ProjectsType;
   language?: SupportedLanguage;
+  loading: boolean;
 }
 
-const Projects = ({ projects, language = "English" }: ProjectsProps) => {
+const Projects = ({
+  projects,
+  loading,
+  language = "English",
+}: ProjectsProps) => {
   const { translate } = useTranslation(language);
 
   return (
@@ -17,11 +23,19 @@ const Projects = ({ projects, language = "English" }: ProjectsProps) => {
         <h2 className="text-2xl font-semibold">
           {translate("projects", "title")}
         </h2>
-        <div className="flex gap-6 mt-10 flex-wrap">
-          {projects.map<JSX.Element>((project, index) => (
-            <Project key={index} project={project} language={language} />
-          ))}
-        </div>
+        {loading ? (
+          <ProjectsLayoutSkeleton count={3} />
+        ) : (
+          <div className="flex gap-6 mt-10 flex-wrap">
+            {projects.map<JSX.Element>((project, index) => (
+              <Project
+                key={`project-${index}`}
+                project={project}
+                language={language}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
