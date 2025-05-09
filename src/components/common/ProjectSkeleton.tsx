@@ -61,28 +61,40 @@ interface ProjectImageFallbackProps {
   title: string;
 }
 
+/**
+ * Fallback component displayed when a project image fails to load.
+ * Shows a placeholder with an image icon and the project title.
+ *
+ * @param {object} props - Component properties
+ * @param {string} props.title - The title of the project to display
+ * @returns {JSX.Element} A styled fallback container with icon and text
+ */
 export const ProjectImageFallback = ({ title }: ProjectImageFallbackProps) => {
   return (
     <div className="w-full h-52 lg:aspect-video bg-gray-800 flex items-center justify-center text-gray-400 rounded lg:object-contain">
       <div className="text-center p-4">
-        <svg
-          className="w-10 h-10 mx-auto mb-2"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-          />
-        </svg>
+        <ImageIcon />
         <p>{title}</p>
       </div>
     </div>
   );
 };
+
+const ImageIcon = () => (
+  <svg
+    className="w-10 h-10 mx-auto mb-2"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+    />
+  </svg>
+);
 
 export default ProjectSkeleton;
