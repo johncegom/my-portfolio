@@ -10,16 +10,12 @@ export const translations = {
 
 export type TranslationComponent = keyof typeof enTranslations;
 
-export const getTranslation = (
-  language: SupportedLanguage,
-  component: TranslationComponent,
-  key: string
-): string => {
-  // Get translations for the specified component in the selected language
-  const componentTranslations = translations[language][component];
-
-  // Return the translated value or fall back to the key if not found
-  return (
-    componentTranslations[key as keyof typeof componentTranslations] ?? key
-  );
-};
+export const createTranslator =
+  (language: SupportedLanguage) =>
+  (component: TranslationComponent) =>
+  (key: string) => {
+    const componentTranslations = translations[language][component];
+    return (
+      componentTranslations[key as keyof typeof componentTranslations] ?? key
+    );
+  };

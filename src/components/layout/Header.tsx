@@ -9,7 +9,8 @@ interface HeaderProps {
 }
 
 const Header = ({ switchLanguage, language = "English" }: HeaderProps) => {
-  const { translate } = useTranslation(language);
+  const { translator } = useTranslation(language);
+  const headerTranslation = translator("header");
 
   return (
     <header className="shadow-black/20 shadow-md">
@@ -36,7 +37,7 @@ const Header = ({ switchLanguage, language = "English" }: HeaderProps) => {
                 duration={500}
                 className="text-gray-300 hover:text-white cursor-pointer"
               >
-                {translate("header", "projects")}
+                {headerTranslation("projects")}
               </Link>
             </li>
             <li className="hidden md:inline">
@@ -47,7 +48,7 @@ const Header = ({ switchLanguage, language = "English" }: HeaderProps) => {
                 duration={500}
                 className="text-gray-300 hover:text-white cursor-pointer"
               >
-                {translate("header", "about")}
+                {headerTranslation("about")}
               </Link>
             </li>
             <li>
@@ -58,7 +59,7 @@ const Header = ({ switchLanguage, language = "English" }: HeaderProps) => {
                 duration={500}
                 className="text-gray-300 hover:text-white cursor-pointer"
               >
-                {translate("header", "contact")}
+                {headerTranslation("contact")}
               </Link>
             </li>
             <li>

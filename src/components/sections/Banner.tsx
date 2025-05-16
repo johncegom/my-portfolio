@@ -7,7 +7,8 @@ interface BannerProps {
 }
 
 const Banner = ({ avatar, language = "English" }: BannerProps) => {
-  const { translate } = useTranslation(language);
+  const { translator } = useTranslation(language);
+  const bannerTranslation = translator("banner");
 
   return (
     <main>
@@ -15,18 +16,18 @@ const Banner = ({ avatar, language = "English" }: BannerProps) => {
         <div className="md:w-5/6">
           <div className="flex justify-center flex-col">
             <h1 className="font-bold text-3xl flex flex-row gap-2">
-              {translate("banner", "greeting")}
+              {bannerTranslation("greeting")}
               <img src={VnFlag} className="w-10" />
             </h1>
             <h1 className="font-bold text-3xl mt-1 gradient-text">
-              {translate("banner", "role")}
+              {bannerTranslation("role")}
             </h1>
           </div>
           <p className="mt-4 text-gray-400 text-justify">
-            {translate("banner", "introduction")}
+            {bannerTranslation("introduction")}
           </p>
           <p className="mt-1 text-gray-400 text-justify">
-            {translate("banner", "introduction1")}
+            {bannerTranslation("introduction1")}
           </p>
         </div>
         <div className="self-center md:w-1/6">

@@ -15,13 +15,14 @@ const Projects = ({
   loading,
   language = "English",
 }: ProjectsProps) => {
-  const { translate } = useTranslation(language);
+  const { translator } = useTranslation(language);
+  const projectsTranslation = translator("projects");
 
   return (
     <section id="projects">
       <div className="container m-auto px-4">
         <h2 className="text-2xl font-semibold">
-          {translate("projects", "title")}
+          {projectsTranslation("title")}
         </h2>
         {loading ? (
           <ProjectsLayoutSkeleton count={3} />

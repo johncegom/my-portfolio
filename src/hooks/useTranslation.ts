@@ -1,12 +1,14 @@
 import {
-  getTranslation,
+  createTranslator,
   SupportedLanguage,
   TranslationComponent,
 } from "../translations/translation";
 
 export function useTranslation(language: SupportedLanguage = "English") {
   const translate = (component: TranslationComponent, key: string) => {
-    return getTranslation(language, component, key);
+    return createTranslator(language)(component)(key);
   };
-  return { translate };
+
+  const translator = createTranslator(language);
+  return { translate, translator };
 }

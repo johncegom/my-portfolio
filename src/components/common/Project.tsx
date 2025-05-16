@@ -10,9 +10,11 @@ interface ProjectProps {
 }
 
 const Project = ({ project, language = "English" }: ProjectProps) => {
-  const { translate } = useTranslation(language);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
+
+  const { translator } = useTranslation(language);
+  const projectTranslation = translator("project");
 
   return (
     <div className="md:flex-[1_380px] border border-gray-500 rounded-md p-5 flex flex-col shadow-black/50 shadow-lg relative gap-6">
@@ -43,14 +45,14 @@ const Project = ({ project, language = "English" }: ProjectProps) => {
           target="_blank"
           className="flex flex-1 py-3 px-1 text-center justify-center items-center rounded-full bg-gradient-to-t from-red-500 to-orange-500 hover:from-red-700 hover:to-orange-700 cursor-pointer"
         >
-          {translate("project", "preview")}
+          {projectTranslation("preview")}
         </a>
         <a
           href={project.repo}
           target="_blank"
           className="flex flex-1 py-3 px-1 text-center justify-center items-center border rounded-full hover:border-gray-500 hover:text-orange-500 cursor-pointer"
         >
-          {translate("project", "github")}
+          {projectTranslation("github")}
         </a>
       </div>
       <div className="absolute right-0 top-0 bg-[#EA403F] text-[#FFFE4E] py-2 px-4 rounded-tr-sm hover:cursor-default">

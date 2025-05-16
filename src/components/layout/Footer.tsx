@@ -6,14 +6,15 @@ interface FooterProps {
 }
 
 const Footer = ({ language = "English" }: FooterProps) => {
-  const { translate } = useTranslation(language);
+  const { translator } = useTranslation(language);
+  const footerTranslation = translator("footer");
 
   return (
     <footer>
       <div className="container m-auto flex justify-between px-4 py-6">
         <div>
           <p className="text-gray-300 text-xl text-dancing-script font-semibold">
-            {translate("footer", "poweredBy")}
+            {footerTranslation("poweredBy")}
           </p>
         </div>
       </div>
