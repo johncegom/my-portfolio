@@ -16,7 +16,7 @@ const Skills = ({ skills, language = "English" }: SkillsProps) => {
     <section>
       <div className="container m-auto px-4 py-14">
         <h2 className="text-2xl font-semibold">{skillsTranslation("title")}</h2>
-        <div className="flex mt-3 w-[80%] flex-wrap gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-5 w-[80%]">
           {skills.map<JSX.Element>((skill, index) => (
             <Skill key={index} skill={skill} />
           ))}
